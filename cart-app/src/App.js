@@ -1,9 +1,8 @@
 import { useState , useEffect } from "react";
 import ProductList from "./components/ProductList"
-import NavBar from "./components/NavBar"
 import CartModal from "./components/CartModal"
-
 import "./App.css"
+import NavBar from "./components/NavBar";
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
@@ -62,6 +61,7 @@ function App() {
         cartCount={totalItems}
         openCart={() => setIsCartOpen(true)}
       />
+      
 
      <ProductList products = {products} addToCart={addToCart}/>
 
